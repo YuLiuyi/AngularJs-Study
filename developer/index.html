@@ -1,0 +1,24 @@
+<html ng-app="main">
+	<header>
+		<title></title>
+		<script type="text/javascript" src="../node_modules/angular/angular.js"></script>
+		<script type="text/javascript" src="../json/application.js"></script>
+		<script type="text/javascript" src="../js/main.js"></script>
+	</header>
+	<body>
+		<div id="container">
+			<div class="header">
+				<div id="nav_top"></div>
+				<div id="nav_center"></div>
+			</div>
+			<div id="content">
+				<div id="left"></div>
+				<div id="right" ng-controller="AppListCtrl">
+					<div ng-repeat="app in appList">
+						{{app.id}}-{{app.name}}-{{app.type}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
