@@ -9,6 +9,13 @@
 		<script type="text/javascript" src="../node_modules/angular/angular.js"></script>
 		<script type="text/javascript" src="../json/application.js"></script>
 		<script type="text/javascript" src="../js/main.js"></script>
+		<script type="text/javascript">
+		function xxx(){
+			var str = "hello!";
+			str = str.substring(str.length);
+			alert(str);
+		}
+		</script>
 	</header>
 	<body>
 		<div class="container">
@@ -25,10 +32,11 @@
 					<ul class="nav nav-tabs">
 						<li class="active"><a href="#">应用管理</a></li>
 						<li><a href="#">个人信息</a></li>
-						<li><a href="#">财务信息</a></li>
+						<li><a href="#" onclick="xxx()">财务信息</a></li>
 					</ul>
 				</div>
 			</div>
+			<div my-directive></div>
 			<div id="content">
 				<div class="col-md-12">
 					<div class="row-fluid">
@@ -68,10 +76,10 @@
 											{{app.name}}
 										</td>
 										<td>
-											{{app.type}}
+											{{app.type | appTypeFilter}}
 										</td>
 										<td>
-											{{app.isApproval}}
+											{{app.isApproval | appIsApprovalFilter}}
 										</td>
 									</tr>
 								</tbody>
