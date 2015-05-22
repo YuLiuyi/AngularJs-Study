@@ -1,5 +1,3 @@
-
-
 var main = angular.module('main', ['ui.router']);
 
 // main.config(['$routeProvider', function ($routeProvider) {
@@ -22,7 +20,7 @@ var main = angular.module('main', ['ui.router']);
 main.config(function ($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/index');
 	$stateProvider
-	.state('state',{
+	.state('index',{
 		url: '/index',
 		views: {
 			'': {
@@ -31,42 +29,45 @@ main.config(function ($stateProvider, $urlRouterProvider) {
 			'topbar@index': {
 				templateUrl: '../view/topbar.html'
 			},
-			'applist@index': {
-				templateUrl: '../view/applist.html'
+			'content@index': {
+				templateUrl: '../view/content.html'
+			},
+			'content_left@index': {
+				templateUrl: '../view/appmgr/appselector.html',
+			},
+			'content_right@index': {
+				templateUrl: '../view/appmgr/applist.html'
 			}
 		}
 	})
+	.state('index.appmgr', {
+		url: '/appmgr',
+		views: {
+			'content_right@index': {
+				templateUrl: '../view/appmgr/appselector.html'
+			}
+		}
+	})
+	.state('index.usermgr',{
+		url: '/usermgr',
+		views: {
+			'content_left@index': {
+				templateUrl: '../view/usermgr/userselector.html'
+			},
+			'content_right@index': {
+				templateUrl: '../view/usermgr/usercontent.html'
+			}
+		}
+	})
+	.state('index.finance', {
+		url: '/financemgr',
+		views: {
+			'content_left@index': {
+
+			},
+			'content_ritht@index': {
+
+			}
+		}
+	});
 });
-
-
-// main.controller('AppListCtrl', ['$scope', function ($scope) {
-// 	$scope.appList = appList;
-// }]);
-
-// main.directive('myDirective', [function () {
-// 	return {
-// 		restrict: 'A',
-// 		template:"<a href='#'>i am a directive</a>",
-// 		link: function (scope, iElement, iAttrs) {
-			
-// 		}
-// 	};
-// }]);
-
-// main.filter('appTypeFilter', function(){
-// 	return function(input){
-// 		if(input == "0"){
-// 			return "normal";
-// 		}
-// 	};
-// });
-
-// main.filter('appIsApprovalFilter', function(){
-// 	return function(input){
-// 		if(input){
-// 			return "haha";
-// 		}else{
-// 			return "hehe";
-// 		}
-// 	};
-// });
