@@ -4,13 +4,13 @@
 	</div>
 	<div id="nav_center" class="col-md-12">
 		<ul class="nav nav-tabs">
-			<li class="active"><a href="#">应用管理</a></li>
-			<li><a href="#">个人信息</a></li>
-			<li><a href="#" onclick="xxx()">财务信息</a></li>
+			<li ui-sref-active="active"><a ui-sref=".appmgr">应用管理</a></li>
+			<li ui-sref-active="active"><a ui-sref=".usermgr">个人信息</a></li>
+			<li ui-sref-active="active"><a ui-sref=".financemgr">财务信息</a></li>
 		</ul>
 	</div>
 </div>
-			<div my-directive></div>
+<!-- 			<div my-directive></div> -->
 <div id="content">
 	<div class="col-md-12" ui-view="content">
 	</div>

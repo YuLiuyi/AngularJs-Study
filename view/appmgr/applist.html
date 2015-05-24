@@ -1,36 +1,34 @@
-<div id="right" class="col-md-8 col-lg-9" ng-controller="AppListCtrl">
-	<table class="table table-hover table-bordered">
-		<thead>
-			<tr>
-				<th>
-					应用ID
-				</th>
-				<th>
-					应用名称
-				</th>
-				<th>
-					应用类型
-				</th>
-				<th>
-					状态
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="app in appList">
-				<td>
-					{{app.id}}
-				</td>
-				<td>
-					{{app.name}}
-				</td>
-				<td>
-					{{app.type | appTypeFilter}}
-				</td>
-				<td>
-					{{app.isApproval | appIsApprovalFilter}}
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<table class="table table-hover table-bordered" ng-controller="AppListCtrl">
+	<thead>
+		<tr>
+			<th>
+				应用ID
+			</th>
+			<th>
+				应用名称
+			</th>
+			<th>
+				应用类型
+			</th>
+			<th>
+				状态
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="app in appList">
+			<td>
+				{{app.id}}
+			</td>
+			<td>
+				{{app.name}}
+			</td>
+			<td>
+				{{app.type | appTypeFilter}}
+			</td>
+			<td>
+				{{app.isApproval | appIsApprovalFilter}}
+			</td>
+		</tr>
+	</tbody>
+</table>

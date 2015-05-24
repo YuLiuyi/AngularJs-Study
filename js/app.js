@@ -43,8 +43,43 @@ main.config(function ($stateProvider, $urlRouterProvider) {
 	.state('index.appmgr', {
 		url: '/appmgr',
 		views: {
-			'content_right@index': {
+			'content_left@index': {
 				templateUrl: '../view/appmgr/appselector.html'
+			},
+			'content_right@index': {
+				templateUrl: '../view/appmgr/applist.html'
+			}
+		}
+	})
+	.state('index.appmgr.applist', {
+		url: '/applist',
+		views: {
+			'content_right@index': {
+				templateUrl: '../view/appmgr/applist.html'
+			}
+		}
+	})
+	.state('index.appmgr.appwhitelist', {
+		url: '/appwhitelist',
+		views: {
+			'content_right@index': {
+				templateUrl: '../view/appmgr/appwhitelist.html'
+			}
+		}
+	})	
+	.state('index.appmgr.appdemo', {
+		url: '/appdemo',
+		views: {
+			'content_right@index': {
+				templateUrl: '../view/appmgr/appdemo.html'
+			}
+		}
+	})
+	.state('index.appmgr.appsmsmgr', {
+		url: '/appsmsmgr',
+		views: {
+			'content_right@index': {
+				templateUrl: '../view/appmgr/appsmsmgr.html'
 			}
 		}
 	})
@@ -59,14 +94,14 @@ main.config(function ($stateProvider, $urlRouterProvider) {
 			}
 		}
 	})
-	.state('index.finance', {
+	.state('index.financemgr', {
 		url: '/financemgr',
 		views: {
 			'content_left@index': {
-
+				templateUrl: '../view/financemgr/financeselector.html'
 			},
-			'content_ritht@index': {
-
+			'content_right@index': {
+				templateUrl: '../view/financemgr/financecontent.html'
 			}
 		}
 	});
