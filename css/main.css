@@ -1,3 +1,8 @@
+a{
+	/*font-size: 16px;*/
+	color: #555;
+}
+
 #nav_top{
 	/*margin: auto;*/
 }
@@ -8,4 +13,62 @@
 
 #content{
 	margin-top: 20px;
+}
+
+.new-app
+{
+	width: 100%
+	/*float: right;*/
+}
+
+.new-app-btn
+{
+
+}
+
+.app-list
+{
+	margin-top: 20px;
+}
+
+.mynav
+{
+	/*background-color: #666;*/
+}
+
+.user-panel
+{
+	text-align: center;
+	/*color: #EEE;*/
+	float: right;
+	margin-top: 15px;
+}
+
+.user-panel a{
+	color: #AAA;
+	font-size: 16px;
+}
+
+/*login.html*/
+.login-container
+{
+	width: 600px;
+	margin:auto;
+	margin-top: 200px;
+}
+/* The order of the folowing four classes is important */
+input.ng-invalid {
+	border: 1px solid red;
+}
+
+input.ng-pristine{
+	border: 1px solid green;
+}
+
+input.ng-dirty{
+	border: 1px solid red;
+}
+
+input.ng-valid {
+	border: 1px solid green;
 }

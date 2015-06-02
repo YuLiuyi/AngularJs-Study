@@ -1,0 +1,83 @@
+<html ng-app="main">
+	<header>
+		<title></title>
+		<meta charset="utf-8">
+		<link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+   		<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  		<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../node_modules/angular/angular.js"></script>
+		<script type="text/javascript" src="../node_modules/angular-route/angular-route.js"></script>
+		<script type="text/javascript" src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+		<script type="text/javascript" src="../json/application.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+		<script type="text/javascript" src="../js/controller.js"></script>
+		<script type="text/javascript" src="../js/filter.js"></script>
+		<script type="text/javascript" src="../js/directive.js"></script>
+		<script type="text/javascript" src="../"></script>
+		<script type="text/javascript">
+		function xxx(){
+			var str = "hello!";
+			//str = str.substring(str.length);
+			alert(str);
+		}
+		</script>
+	</header>
+	<body>
+		<div class="login-container ">
+			<div class="form-login-error">
+				<h3>Invalid login</h3>
+				<p>Enter <strong>demo</strong>/<strong>demo</strong> as login and password.</p>
+			</div>
+			<form method="post" role="form" id="form_login" ng-controller="UserCtrl">
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon">
+							<i class="fa fa-user"></i>
+						</div>
+						<input ng-model="user.username" type="text" class="form-control" name="username" id="username" placeholder="Username" autocomplete="off" />
+						<h1>Hello {{ user.username }}</h1>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon">
+							<i class="fa fa-key"></i>
+						</div>
+						<input ng-model="user.pwd" type="password" class="form-control" name="password" id="password" placeholder="Password" autocomplete="off" />
+						<h1>Hello {{ user.pwd }}</h1>
+					</div>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-block btn-login">
+						<i class="fa fa-sign-in"></i>
+						Login In
+					</button>
+				</div>
+				<!-- <div class="form-group">
+					<em>- or -</em>
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-default btn-lg btn-block facebook-button">
+						&#160;&#160;
+						<i class="fa fa-facebook"></i>
+               |  Login with Facebook
+					</button>
+				</div>
+				You can also use other social network buttons
+				<div class="form-group">
+					<button type="button" class="btn btn-default btn-lg btn-block btn-icon icon-left twitter-button">
+						Login with Twitter
+						<i class="entypo-twitter"></i>
+					</button>
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-default btn-lg btn-block btn-icon icon-left google-button">
+						Login with Google+
+						<i class="entypo-gplus"></i>
+					</button>
+				</div> -->
+			</form>
+		</div>
+	</body>
+</html>

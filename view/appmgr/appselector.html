@@ -1,6 +1,6 @@
 <ul class="nav nav-pills nav-stacked navbar-default" ng-controller="AppListSelectorCtrl">
-	<li ui-sref-active="active"><a ui-sref=".applist">应用列表</a></li>   
-	<li ui-sref-active="active"><a ui-sref=".appwhitelist">测试号码白名单</a></li> 
-	<li ui-sref-active="active"><a ui-sref=".appdemo">测试demo</a></li> 
-	<li ui-sref-active="active"><a ui-sref=".appsmsmgr">短信管理</a></li> 
+	<li ui-sref-active="active"><a ng-controller="AppListCtrl" ui-sref="index.appmgr.applist">应用列表</a></li>   
+<!-- 	<li ui-sref-active="active"><a ui-sref="index.appmgr.appwhitelist">测试号码白名单</a></li> 
+	<li ui-sref-active="active"><a ui-sref="index.appmgr.appdemo">测试demo</a></li>  -->
+	<li ui-sref-active="active"><a ui-sref="index.appmgr.appsmsmgr">短信管理</a></li> 
 </ul>

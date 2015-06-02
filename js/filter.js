@@ -1,12 +1,12 @@
-main.filter('appTypeFilter', function(){
+angular.module('main.filters', [])
+.filter('appTypeFilter', function(){
 	return function(input){
 		if(input == "0"){
 			return "normal";
 		}
 	};
-});
-
-main.filter('appIsApprovalFilter', function(){
+})
+.filter('appIsApprovalFilter', function(){
 	return function(input){
 		if(input){
 			return "haha";

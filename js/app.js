@@ -1,4 +1,10 @@
-var main = angular.module('main', ['ui.router']);
+var main = angular.module('main', [
+	'ui.router',
+	'main.controllers',
+	'main.directives',
+	'main.services',
+	'main.filters'
+	]);
 
 // main.config(['$routeProvider', function ($routeProvider) {
 // 	//定义路由
@@ -18,7 +24,18 @@ var main = angular.module('main', ['ui.router']);
 // }]);
 
 main.config(function ($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise('/index');
+	$urlRouterProvider
+	.otherwise('/index/overview')
+	.when('/index/appmgr', function($state){
+		$state.go('index.appmgr.applist');
+	})
+	.when('/index/usermgr', function($state){
+		$state.go('index.usermgr.userinfo');
+	})
+	.when('/index/financemgr', function($state){
+		$state.go('index.financemgr');//TODO
+	});
+
 	$stateProvider
 	.state('index',{
 		url: '/index',
@@ -40,6 +57,22 @@ main.config(function ($stateProvider, $urlRouterProvider) {
 			}
 		}
 	})
+	.state('index.overview', {
+		url: '/overview',
+		views: {
+			'content@index': {
+				templateUrl: '../view/overview.html'
+			}
+		}
+	})
+	.state('login', {
+		url: '/login',
+		views: {
+			'': {
+				templateUrl: '../view/login.html'
+			}
+		}
+	})
 	.state('index.appmgr', {
 		url: '/appmgr',
 		views: {
@@ -49,13 +82,21 @@ main.config(function ($stateProvider, $urlRouterProvider) {
 			'content_right@index': {
 				templateUrl: '../view/appmgr/applist.html'
 			}
-		}
+		},
 	})
 	.state('index.appmgr.applist', {
 		url: '/applist',
 		views: {
 			'content_right@index': {
 				templateUrl: '../view/appmgr/applist.html'
+			}
+		}
+	})
+	.state('index.appmgr.applist.appcreator',{
+		url: '/appcreator',
+		views: {
+			'content_right@index': {
+				templateUrl: '../view/appmgr/appcreator.html'
 			}
 		}
 	})
@@ -83,6 +124,7 @@ main.config(function ($stateProvider, $urlRouterProvider) {
 			}
 		}
 	})
+	
 	.state('index.usermgr',{
 		url: '/usermgr',
 		views: {
@@ -90,7 +132,15 @@ main.config(function ($stateProvider, $urlRouterProvider) {
 				templateUrl: '../view/usermgr/userselector.html'
 			},
 			'content_right@index': {
-				templateUrl: '../view/usermgr/usercontent.html'
+				templateUrl: '../view/usermgr/userinfo.html'
+			}
+		}
+	})
+	.state('index.usermgr.userinfo', {
+		url: '/userinfo',
+		views: {
+			'content_right@index': {
+				templateUrl: '../view/usermgr/userinfo.html'
 			}
 		}
 	})

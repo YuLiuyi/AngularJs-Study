@@ -1,0 +1,75 @@
+<form action="/user/modifyDevelop" method="post" name="developForm" id="developForm">
+				<!--基础信息 bof-->
+				<div class="edit_box edit_basic developer_info">
+					<h1>基础信息</h1>
+					<div class="edit_ctn">
+						<div class="edit_field">
+							<dl class="dl1">
+								<dt>开发者账号</dt>
+								<dd><span class="txt">isxinchen@gmail.com</span></dd>
+							</dl>
+							<dl>
+								<dt>开发者认证：</dt>
+								<dd>
+									<span class="txt">
+									
+										
+			                			
+			                				注册用户
+			                			
+										
+											<a href="" class="do">立即认证</a>
+										
+										
+									
+									
+									</span>
+								</dd>
+							</dl>
+						</div>
+						<div class="edit_field">
+							<dl>
+								<dt>昵称</dt>
+								<dd><span class="txt">isxinchen</span></dd>
+							</dl>
+						</div>
+						<div class="edit_field">
+							<dl>
+								<dt>注册手机号</dt>
+								<dd><span class="txt">18600991213</span><a href="javascript:;" class="blue float_link">变更手机号</a></dd>
+							</dl>
+						</div>
+
+						<div class="edit_field">
+							<dl>
+								<dt>联系地址</dt>
+								<dd>
+									
+								</dd>
+								<dd>
+								<input type="text" name="user.address" id="address" value="" />
+								<span class="error" id="address_error" style="display:none">错误：地址非法</span>
+								<input type="hidden" id="cityId" value="" name="user.city" />
+								<input type="hidden" id="provinceId" value="" name="user.province"/>
+								</dd>						
+							</dl>
+						</div>
+
+						<div class="edit_field">
+							<dl>
+								<dt>登录密码</dt>
+								<dd><span class="txt">*******</span><a href="javascript:void(0)" class="correct_pwd float_link1">修改密码</a></dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<!--基础信息 eof-->
+				
+
+				<!--编辑提交按钮 bof-->
+				<div class="edit_btn">
+					<input type="submit" value="保存" class="confirm_btn  grey_btn" id="dev_confirm_btn" disabled="disabled"/>
+					<input type="button" value="取消" class="cancel_btn" id="dev_cancel_btn"/>
+				</div>
+				<!--编辑提交按钮 bof-->
+			</form>
